@@ -66,7 +66,7 @@ gb() {
 }
 
 # git branch all
-gb() {
+gba() {
     git branch -a
 }
 
