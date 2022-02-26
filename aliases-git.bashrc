@@ -70,6 +70,12 @@ gba() {
     git branch -a
 }
 
+# git delete branches
+gbd() {
+    branches=( "$@" )
+    git branch -d "${branches[@]}"
+}
+
 # git branch set upstream
 gbu() {
     branch="$1"
