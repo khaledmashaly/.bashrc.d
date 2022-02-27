@@ -88,3 +88,8 @@ gcobu() {
     gcob "$branch"
     gbu "$branch"
 }
+
+# prune origin remote
+grpo() {
+    git remote prune origin
+}
