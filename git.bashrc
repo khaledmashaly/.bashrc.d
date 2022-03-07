@@ -82,11 +82,12 @@ gbu() {
     git branch --set-upstream-to="origin/$branch" "$branch"
 }
 
-# git checkout branch and set upstream
+# git checkout branch, set upstream, and pull
 gcobu() {
     branch="$1"
     gcob "$branch"
     gbu "$branch"
+    git pull
 }
 
 # prune origin remote
