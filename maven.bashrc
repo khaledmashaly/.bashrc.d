@@ -27,3 +27,8 @@ md() {
 msw() {
     mvn -N io.takari:maven:wrapper
 }
+
+# checkstyle:check
+mcc() {
+    ./mvnw clean compile checkstyle:check
+}
