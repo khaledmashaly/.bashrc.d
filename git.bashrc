@@ -42,6 +42,11 @@ gp() {
     git push --tags origin HEAD
 }
 
+# pull all
+gpa() {
+    git pull --all
+}
+
 # git tag
 gt() {
     version="$1"
