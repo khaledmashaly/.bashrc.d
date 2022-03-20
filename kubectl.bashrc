@@ -53,3 +53,21 @@ kdps() {
     pod="$1"
     kube_ctl_describe stg prod pod "$pod"
 }
+
+# production context
+kp() {
+    args=( "$@" )
+    kubectl --context prd "${args[@]}"
+}
+
+# staging context
+ks() {
+    args=( "$@" )
+    kubectl --context stg "${args[@]}"
+}
+
+# development context
+kd() {
+    args=( "$@" )
+    kubectl --context dev "${args[@]}"
+}
