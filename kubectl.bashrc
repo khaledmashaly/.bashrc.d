@@ -71,3 +71,24 @@ kd() {
     args=( "$@" )
     kubectl --context dev "${args[@]}"
 }
+
+# list all images
+kube_ctl_list_all_images() {
+    context="$1"
+    namespace="$2"
+    kubectl get pods --context "$context" --namespace "$namespace" \
+        -o jsonpath="{.items[*].spec.containers[*].image}" |\
+        tr -s '[[:space:]]' '\n' |\
+        sort |\
+        uniq -c
+}
+
+# list all images production
+klip() {
+    kube_ctl_list_all_images prd prod
+}
+
+# list all images staging
+klis() {
+    kube_ctl_list_all_images stg prod
+}
