@@ -15,5 +15,5 @@ dcd() {
 
 # compose exec
 dce() {
-    docker compose exec
+    docker compose exec "$@"
 }
