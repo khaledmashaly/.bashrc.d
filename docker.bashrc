@@ -10,7 +10,7 @@ dcud() {
 
 # compose down
 dcd() {
-    docker compose down
+    docker compose down "$@"
 }
 
 # compose exec
