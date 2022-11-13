@@ -50,7 +50,7 @@ gpa() {
 # git tag
 gt() {
     version="$1"
-    git commit -m "Release v$version" && git tag -a "v$version" -m "Version $version"
+    git commit -m "chore: release v$version" && git tag -a "v$version" -m "Version $version"
 }
 
 # git checkout
