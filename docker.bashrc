@@ -1,24 +1,24 @@
-# compose up
-dcu() {
-    docker compose up
-}
-
-# compose up detached
-dcud() {
-    docker compose up -d
-}
-
 # compose dev up
-dcdu() {
-    docker compose -f docker-compose.dev.yml up
+ddu() {
+    docker compose -f docker-compose.dev.yml up "$@"
+}
+
+# compose dev exec
+dde() {
+    docker compose -f docker-compose.dev.yml exec "$@"
+}
+
+# compose prod up
+dpu() {
+    docker compose up "$@"
+}
+
+# compose prod exec
+dpe() {
+    docker compose exec "$@"
 }
 
 # compose down
 dcd() {
-    docker compose down "$@"
-}
-
-# compose exec
-dce() {
-    docker compose exec "$@"
+    docker compose down -v "$@"
 }
