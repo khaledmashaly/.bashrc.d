@@ -38,13 +38,13 @@ gcm() {
 }
 
 # git push
-gp() {
-    git push --tags origin HEAD
+gpoh() {
+    git push origin HEAD
 }
 
 # pull all
-gpa() {
-    git pull --all
+gpl() {
+    git pull
 }
 
 # git tag
