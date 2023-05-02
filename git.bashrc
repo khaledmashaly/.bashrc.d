@@ -38,13 +38,13 @@ gcm() {
 }
 
 # git push
-gpoh() {
+gps() {
     git push origin HEAD
 }
 
 # pull all
 gpl() {
-    git pull
+    git pull --all --prune
 }
 
 # git tag
