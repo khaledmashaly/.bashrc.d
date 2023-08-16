@@ -1,10 +1,10 @@
 # compose dev up
-ddu() {
+dcu() {
     docker compose -f docker-compose.dev.yml up "$@"
 }
 
 # compose dev exec
-dde() {
+dce() {
     docker compose -f docker-compose.dev.yml exec "$@"
 }
 
