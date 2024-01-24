@@ -1,6 +1,6 @@
 # compose dev up
 dcu() {
-    docker compose -f docker-compose.dev.yml up "$@"
+    docker compose -f docker-compose.dev.yml up --remove-orphans -t 1 "$@"
 }
 
 # compose dev exec
@@ -20,5 +20,5 @@ dpe() {
 
 # compose down
 dcd() {
-    docker compose -f docker-compose.dev.yml down -v "$@"
+    docker compose -f docker-compose.dev.yml down -v --remove-orphans -t 1 "$@"
 }
